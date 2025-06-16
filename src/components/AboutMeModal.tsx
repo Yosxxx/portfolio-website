@@ -31,11 +31,10 @@ export default function AboutMeModal({ onClose }: Props) {
                 <p className="text-justify">
                     I'm a 20-year-old Computer Science student at Bina
                     Nusantara, specializing in Artificial Intelligence. I love
-                    “vibecoding”—replicating clean designs in code, adding my
-                    own twist, and always crediting the originals. My toolkit
-                    includes Python, C/C++, Java, JavaScript (React, Next.js,
-                    Vite.js), and I work with SaaS back-ends like Supabase,
-                    Clerk, Neon, and MySQL.
+                    replicating clean designs and adding my own twist and always
+                    crediting the originals. My toolkit includes Python, C/C++,
+                    Java, JavaScript (React, Next.js, Vite.js), and I work with
+                    SaaS back-ends like Supabase, Clerk, Neon, and MySQL.
                 </p>
             </div>
         </div>
