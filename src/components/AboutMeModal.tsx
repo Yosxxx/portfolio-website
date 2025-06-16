@@ -1,4 +1,3 @@
-// src/components/AboutMeModal.tsx
 "use client";
 
 import Image from "next/image";
@@ -63,7 +62,7 @@ export default function AboutMeModal({ onClose }: Props) {
             onClick={onClose}
         >
             <div
-                className="relative rounded-lg p-6 max-w-xl w-full bg-white"
+                className="relative rounded-lg p-6 max-w-xl w-full "
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="rounded-md mb-4 flex items-center justify-center overflow-hidden">

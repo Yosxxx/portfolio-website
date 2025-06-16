@@ -1,4 +1,3 @@
-// src/components/Carousel.tsx
 "use client";
 
 import React, { useRef, useEffect } from "react";
@@ -21,7 +20,7 @@ const slides = [
         caption: "Apple Website Replica",
     },
     {
-        src: "/images/project-samples/2.png",
+        src: "/images/project-samples/21.png",
         href: "https://vispa-pv5j.vercel.app/home",
         caption: "Visp Sign Language Website",
     },
@@ -96,12 +95,10 @@ export default function Carousel() {
                         key={i}
                         className="swiper-slide relative"
                         style={{
-                            width: "min(90vw, 700px)",
-                            height: "min(50vw, 350px)",
+                            width: "min(70vw, 350px)", // smaller max width
+                            aspectRatio: "1 / 1",
                             borderRadius: "1rem",
                             overflow: "hidden",
-                            boxShadow:
-                                "0 8px 24px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.05)",
                         }}
                     >
                         <a
@@ -114,12 +111,11 @@ export default function Carousel() {
                                 src={src}
                                 alt={caption}
                                 fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 700px"
+                                sizes="(max-width: 768px) 80vw, 350px"
                                 style={{ objectFit: "cover" }}
                                 priority={i === 0}
                             />
-                            {/* Caption overlay */}
-                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded">
+                            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white text-xs px-2 py-0.5 rounded">
                                 {caption}
                             </div>
                         </a>
@@ -127,20 +123,16 @@ export default function Carousel() {
                 ))}
             </Swiper>
 
-            <div className="custom-swiper-pagination mt-12 flex justify-center gap-2" />
+            {/* bullets even closer: mt-4 */}
+            <div className="custom-swiper-pagination mt-4 flex justify-center gap-2" />
 
             <style jsx global>{`
                 .carousel-wrapper {
-                    /* prevent “rubber-band” overscroll */
                     overscroll-behavior-x: none;
                 }
                 .custom-swiper-pagination .swiper-pagination-bullet {
-                    width: 10px;
-                    height: 10px;
-                    background-color: #d3d3d3;
-                    opacity: 1;
-                    border-radius: 9999px;
-                    transition: background-color 0.3s ease;
+                    width: 8px;
+                    height: 8px;
                 }
                 .custom-swiper-pagination .swiper-pagination-bullet-active {
                     background-color: black;
