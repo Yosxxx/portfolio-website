@@ -1,9 +1,9 @@
-// src/components/AboutMeModal.tsx
 "use client";
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import profile_picture from "../../public/images/profile-picture/picture.jpg";
 
 type Props = { onClose: () => void };
 
@@ -68,7 +68,7 @@ export default function AboutMeModal({ onClose }: Props) {
             >
                 <div className="rounded-md mb-4 flex items-center justify-center overflow-hidden">
                     <Image
-                        src="/images/pfp.jpg"
+                        src={profile_picture}
                         alt="My profile"
                         width={200}
                         height={200}
@@ -95,11 +95,10 @@ export default function AboutMeModal({ onClose }: Props) {
                 <p className="text-justify">
                     I&apos;m a 20-year-old Computer Science student at Bina
                     Nusantara, specializing in Artificial Intelligence. I love
-                    replicating clean designs and adding my own twist, and
-                    always crediting the originals. My toolkit includes Python,
-                    C/C++, Java, JavaScript (React, Next.js, Vite.js), and I
-                    work with SaaS back-ends like Supabase, Clerk, Neon, and
-                    MySQL.
+                    replicating clean designs, adding my own twist, and always
+                    crediting the originals. My toolkit includes Python, C/C++,
+                    Java, JavaScript (React, Next.js, Vite.js), and I work with
+                    SaaS back-ends like Supabase, Clerk, Neon, and MySQL.
                 </p>
             </div>
         </motion.div>

@@ -20,7 +20,7 @@ const slides = [
         caption: "Apple Website Replica",
     },
     {
-        src: "/images/project-samples/21.png",
+        src: "/images/project-samples/2.png",
         href: "https://vispa-pv5j.vercel.app/home",
         caption: "Visp Sign Language Website",
     },
@@ -41,7 +41,7 @@ const slides = [
     },
     {
         src: "/images/project-samples/6.png",
-        href: "https://github.com/Yosxxx/ML-BreastCancer",
+        href: "https://yosxxx-ml-breastcancer-app-6r08rk.streamlit.app/",
         caption: "Breast Cancer Predictor",
     },
 ];
