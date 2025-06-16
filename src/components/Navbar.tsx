@@ -1,3 +1,4 @@
+// src/components/Navbar.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -12,7 +13,6 @@ export default function Navbar() {
     const pathname = usePathname();
     const [activeModal, setActiveModal] = useState<ModalType>(null);
 
-    // Helpers for “is this tab active?”
     const isPortfoliosActive = pathname === "/" && activeModal === null;
     const isAboutActive = activeModal === "about";
     const isCreditsActive = activeModal === "credits";
@@ -25,8 +25,10 @@ export default function Navbar() {
                     href="/"
                     onClick={() => setActiveModal(null)}
                     className={
-                        `bg-cloud-200 pt-12 pr-15 pb-2 pl-2 border border-cloud-300 rounded-xl mt-2 ml-2 text-sm ` +
-                        (isPortfoliosActive ? "text-black" : "text-cloud-300")
+                        `bg-cloud-200 pt-12 pr-15 pb-2 pl-2 rounded-xl mt-2 ml-2 text-sm ` +
+                        (isPortfoliosActive
+                            ? "text-black border border-black"
+                            : "text-cloud-300 border border-cloud-300")
                     }
                 >
                     PORTFOLIOS
@@ -38,8 +40,10 @@ export default function Navbar() {
                         setActiveModal(isAboutActive ? null : "about")
                     }
                     className={
-                        `bg-cloud-200 pt-12 pr-15 pb-2 pl-2 border border-cloud-300 rounded-xl mt-2 ml-2 text-sm ` +
-                        (isAboutActive ? "text-black" : "text-cloud-300")
+                        `bg-cloud-200 pt-12 pr-15 pb-2 pl-2 rounded-xl mt-2 ml-2 text-sm ` +
+                        (isAboutActive
+                            ? "text-black border border-black"
+                            : "text-cloud-300 border border-cloud-300")
                     }
                 >
                     ABOUT ME
@@ -51,8 +55,10 @@ export default function Navbar() {
                         setActiveModal(isCreditsActive ? null : "credits")
                     }
                     className={
-                        `bg-cloud-200 pt-12 pr-15 pb-2 pl-2 border border-cloud-300 rounded-xl mt-2 ml-2 text-sm ` +
-                        (isCreditsActive ? "text-black" : "text-cloud-300")
+                        `bg-cloud-200 pt-12 pr-15 pb-2 pl-2 rounded-xl mt-2 ml-2 text-sm ` +
+                        (isCreditsActive
+                            ? "text-black border border-black"
+                            : "text-cloud-300 border border-cloud-300")
                     }
                 >
                     CREDITS / INSPIRATION

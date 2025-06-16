@@ -8,19 +8,19 @@ type Props = { onClose: () => void };
 export default function AboutMeModal({ onClose }: Props) {
     return (
         <div
-            className="fixed inset-0 bg-white/60 backdrop-blur-sm z-40 flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-white/60 backdrop-blur-lg z-40 flex flex-col items-center justify-center"
             onClick={onClose}
         >
             <div
-                className="relative bg-white rounded-lg p-6 max-w-sm w-full"
+                className="relative  rounded-lg p-6 max-w-xl  w-full"
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className=" bg-gray-200 rounded-md mb-4 flex items-center justify-center overflow-hidden">
+                <div className=" rounded-md mb-4 flex items-center justify-center overflow-hidden">
                     <Image
                         src="/images/pfp.jpg"
                         alt="My profile"
-                        width={500}
-                        height={500}
+                        width={200}
+                        height={200}
                         className=" object-cover"
                     />
                 </div>
@@ -37,12 +37,6 @@ export default function AboutMeModal({ onClose }: Props) {
                     Vite.js), and I work with SaaS back-ends like Supabase,
                     Clerk, Neon, and MySQL.
                 </p>
-                <button
-                    onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-                >
-                    ✕
-                </button>
             </div>
         </div>
     );

@@ -1,34 +1,44 @@
+// src/components/CreditsModal.tsx
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = { onClose: () => void };
 
 export default function CreditsModal({ onClose }: Props) {
     return (
         <div
-            className="fixed inset-0 bg-white/60 backdrop-blur-sm z-40 flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-white/60 backdrop-blur-lg z-40 flex items-center justify-center"
             onClick={onClose}
         >
             <div
-                className="relative bg-white rounded-lg p-6 max-w-sm w-full"
+                className="relative  rounded-lg p-6 max-w-3xl w-full"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Placeholder image */}
-                <div className="w-full h-48 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-                    <span className="text-gray-500">Credits Placeholder</span>
+                <div className="w-full h-auto bg-gray-200 rounded-md mb-4 overflow-hidden">
+                    <Image
+                        src="/images/credits/Unveil.jpeg"
+                        alt="Credits Inspiration"
+                        width={1200}
+                        height={1000}
+                        className="object-cover"
+                    />
                 </div>
 
-                <p className="text-center text-lg mb-2">
+                <p className="text-center text-lg font-semibold mb-4">
                     Credits & Inspiration
                 </p>
-
-                <button
-                    onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-                >
-                    ✕
-                </button>
+                <div className="text-center">
+                    <Link
+                        href="https://unveil.fr/"
+                        className="hover:text-cloud-200"
+                    >
+                        Unveil.fr
+                    </Link>
+                </div>
             </div>
         </div>
     );
