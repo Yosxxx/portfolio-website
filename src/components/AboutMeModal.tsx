@@ -1,3 +1,4 @@
+// src/components/AboutMeModal.tsx
 "use client";
 
 import Image from "next/image";
@@ -62,7 +63,7 @@ export default function AboutMeModal({ onClose }: Props) {
             onClick={onClose}
         >
             <div
-                className="relative rounded-lg p-6 max-w-xl w-full "
+                className="relative rounded-lg p-6 max-w-xl w-full"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="rounded-md mb-4 flex items-center justify-center overflow-hidden">
@@ -92,7 +93,7 @@ export default function AboutMeModal({ onClose }: Props) {
                 </p>
 
                 <p className="text-justify">
-                    I'm a 20-year-old Computer Science student at Bina
+                    I&apos;m a 20-year-old Computer Science student at Bina
                     Nusantara, specializing in Artificial Intelligence. I love
                     replicating clean designs and adding my own twist, and
                     always crediting the originals. My toolkit includes Python,
